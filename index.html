@@ -1,10 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AI TikTok Creator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI TikTok Creator</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0b0b0f;
+  color:white;
+}
+.container{
+  max-width:600px;
+  margin:auto;
+  padding:25px;
+}
+h1{
+  font-size:30px;
+}
+.card{
+  background:#17171d;
+  padding:20px;
+  border-radius:18px;
+  margin-top:20px;
+}
+button{
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:12px;
+  background:#fff;
+  color:#000;
+  font-size:16px;
+  font-weight:bold;
+}
+input{
+  width:100%;
+  padding:14px;
+  box-sizing:border-box;
+  margin:10px 0 15px;
+  border-radius:10px;
+  border:0;
+}
+</style>
 </head>
+
 <body>
-  <h1>AI TikTok Creator</h1>
-  <p>AI video generator is ready.</p>
+
+<div class="container">
+
+<h1>🤖 AI TikTok Creator</h1>
+<p>Automatically create viral-style TikTok videos.</p>
+
+<div class="card">
+<h2>🎬 Create Video</h2>
+
+<label>Video Topic</label>
+<input id="topic" placeholder="Example: Amazing facts">
+
+<label>Bangla Caption</label>
+<input id="caption" placeholder="Write your caption">
+
+<button onclick="createVideo()">✨ Generate Video</button>
+
+<p id="status"></p>
+</div>
+
+<div class="card">
+<h2>📊 Automation</h2>
+<p>Trend Detection: 🔴 Not connected</p>
+<p>AI Video Generator: 🔴 Not connected</p>
+<p>TikTok Upload: 🔴 Not connected</p>
+</div>
+
+</div>
+
+<script>
+function createVideo(){
+  let topic=document.getElementById("topic").value;
+
+  if(!topic){
+    document.getElementById("status").innerText="⚠️ Enter a topic first.";
+    return;
+  }
+
+  document.getElementById("status").innerText=
+  "⏳ AI is preparing your video idea...";
+}
+</script>
+
 </body>
   </html>
